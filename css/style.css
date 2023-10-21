@@ -26,8 +26,8 @@ body {
     font-family: 'inter', 'Montserrat';
     line-height: 1.7;
     overflow: hidden;
-    /*  color: var(--color-blue);
-    background: var(--color-white);*/
+    color: var(--color-blue);
+    background: var(--color-white);
 }
 
 
