@@ -26,8 +26,8 @@ body {
     font-family: 'inter', 'Montserrat';
     line-height: 1.7;
     overflow: hidden;
-    color: var(--color-blue);
-    background: var(--color-white);
+    /*  color: var(--color-blue);
+    background: var(--color-white);*/
 }
 
 
@@ -243,6 +243,12 @@ section {
 
 @media screen and (max-width: 1024px) {
 
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+
+    }
+
     .container {
         width: var(--container-width-md);
 
@@ -326,20 +332,27 @@ section {
 
 
     section {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        text-align: center;
-        padding: 3rem 0;
+        display: grid;
+
+        padding: 4rem 0;
+        gap: 1rem;
 
     }
 
+
+    .services p {
+        margin-top: 8px;
+        padding: 0.5rem 0 1rem;
+        font-size: 15px;
+
+    }
 
     /*======================MEDIA QUERIES (PHONES)=================*/
     @media screen and (max-width:600px) {
         .container {
             width: var(--contain-width-sm);
         }
+
 
 
     }
@@ -402,11 +415,9 @@ section {
     }
 
     section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        text-align: center;
-        padding: 3rem 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
 
     }
 
@@ -423,6 +434,28 @@ section {
     .about {
         font-size: 15px;
         padding-top: 6px;
+    }
+
+
+    @media screen and (max-width:492px) {
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+        }
+
+        .icons-img {
+            width: 85px;
+
+        }
+
+        .services p {
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+
     }
 
     @media screen and (max-width:393px) {
@@ -445,7 +478,6 @@ section {
 
         }
 
-
         .search-bar p {
             padding: 6px;
             line-height: 1.2;
@@ -459,25 +491,5 @@ section {
             padding: 33px 15px;
 
         }
-
-        .services {
-
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /*
-        .services p {
-            margin-top: 8px;
-        }
-
-        .icons-img {
-            width: 45px;
-        }*/
-
-
     }
-
-
-
 }
